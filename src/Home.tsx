@@ -76,10 +76,10 @@ const NFT = styled(Paper)`
   background-color: var(--card-background-color) !important;
 
 `;
-const Des = styled(NFT)`
-  text-align: left;
-  padding-top: 0px;
-`;
+// const Des = styled(NFT)`
+//   text-align: left;
+//   padding-top: 0px;
+// `;
 
 const Card = styled(Paper)`
   display: inline-block;
@@ -117,7 +117,7 @@ const Logo = styled.div`
   flex: 0 0 auto;
 
   img {
-    height: 60px;
+    height: 100px;
   }
 `;
 const Menu = styled.ul`
@@ -228,7 +228,7 @@ const BorderLinearProgress = styled(LinearProgress)`
 `;
 
 const ShimmerTitle = styled.h1`
-  margin: 50px auto;
+  margin: 20px auto;
   text-transform: uppercase;
   animation: glow 2s ease-in-out infinite alternate;
   color: var(--main-text-color);
@@ -242,20 +242,9 @@ const ShimmerTitle = styled.h1`
   }
 `;
 
-const GoldTitle = styled.h2`
-  color: var(--title-text-color);
-`;
-
-const LogoAligner = styled.div`
-  display: flex;
-  align-items: center;
-
-  img {
-    max-height: 35px;
-    margin-right: 10px;
-  }
-`;
-
+// const GoldTitle = styled.h2`
+//   color: var(--title-text-color);
+// `;
 export interface HomeProps {
     candyMachineId: anchor.web3.PublicKey;
     connection: anchor.web3.Connection;
@@ -500,17 +489,19 @@ const Home = (props: HomeProps) => {
                     </Wallet>
                 </WalletContainer>
                 <ShimmerTitle>#RugWar Game</ShimmerTitle>
+                <p>SPW is a kind of squid game, where you need to complete daily tasks to win RUG WAR (SOL).
+                    If you forget about tasks your NFT will die on a rugwar. The project will be dead in a month.</p>
                 <br/>
 
 
                 <MintContainer>
                     <DesContainer>
                         <NFT elevation={3}>
-                            <h2>Solana Pet War</h2>
+                            <h2>Sol Pet War</h2>
                             <br/>
                             <div><Price
                                 label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
-                                src="cool-cats.gif"
+                                src="gif.gif"
                                 alt="NFT To Mint"/></div>
                             <br/>
                             {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) &&
